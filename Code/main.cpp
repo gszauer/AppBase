@@ -13,6 +13,8 @@
 #include "../Framework/sokol_imgui.h"
 #include "../Framework/Roboto.h"
 
+#include "../SoLoud/soloud.h"
+
 static bool show_test_window = true;
 static bool show_another_window = false;
 
