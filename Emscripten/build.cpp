@@ -10,6 +10,7 @@
 #include "../Framework/dr_impl.cpp"
 #include "../Framework/stb_vorbis.c"
 
+#define WITH_MINIAUDIO
 #include "../SoLoud/soloud.cpp"
 #include "../SoLoud/soloud_audiosource.cpp"
 #include "../SoLoud/soloud_bassboostfilter.cpp"
