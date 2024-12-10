@@ -195,6 +195,12 @@
     <ClInclude Include="..\Framework\stb_vorbis.h">
       <Filter>Header Files\Framework</Filter>
     </ClInclude>
+    <ClInclude Include="..\Framework\qoa.h">
+      <Filter>Header Files\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Framework\qoi.h">
+      <Filter>Header Files\Framework</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Framework\sokol_impl.cpp">
@@ -325,6 +331,12 @@
     </ClCompile>
     <ClCompile Include="..\SoLoud\soloud_wavstream.cpp">
       <Filter>Source Files\SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Framework\qoa.cpp">
+      <Filter>Source Files\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Framework\qoi.cpp">
+      <Filter>Source Files\Framework</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

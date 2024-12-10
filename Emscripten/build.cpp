@@ -9,6 +9,8 @@
 #include "../Framework/imgui.cpp"
 #include "../Framework/dr_impl.cpp"
 #include "../Framework/stb_vorbis.c"
+#include "../Framework/qoa.cpp"
+#include "../Framework/qoi.cpp"
 
 #define WITH_MINIAUDIO
 #include "../SoLoud/soloud.cpp"

@@ -137,6 +137,8 @@
     <ClInclude Include="..\Framework\imstb_textedit.h" />
     <ClInclude Include="..\Framework\imstb_truetype.h" />
     <ClInclude Include="..\Framework\miniaudio.h" />
+    <ClInclude Include="..\Framework\qoa.h" />
+    <ClInclude Include="..\Framework\qoi.h" />
     <ClInclude Include="..\Framework\Roboto.h" />
     <ClInclude Include="..\Framework\sokol_app.h" />
     <ClInclude Include="..\Framework\sokol_audio.h" />
@@ -193,6 +195,8 @@
     <ClCompile Include="..\Framework\imgui_tables.cpp" />
     <ClCompile Include="..\Framework\imgui_widgets.cpp" />
     <ClCompile Include="..\Framework\miniaudio.c" />
+    <ClCompile Include="..\Framework\qoa.cpp" />
+    <ClCompile Include="..\Framework\qoi.cpp" />
     <ClCompile Include="..\Framework\sokol_impl.cpp" />
     <ClCompile Include="..\Framework\stb_vorbis.c" />
     <ClCompile Include="..\SoLoud\soloud.cpp" />
