@@ -28,7 +28,7 @@ std::string GenerateGuid() {
 extern "C" uuid_result uuid_rng_generate(uuid_rand* pRNG, void* pBufferOut, size_t byteCount) {
     static std::random_device dev;
     static std::mt19937 rng(dev());
-    static std::uniform_int_distribution<std::mt19937::result_type> rndDist(1, 300000);
+    static std::uniform_int_distribution<std::mt19937::result_type> rndDist(0, UINT_MAX);
 
     int numberOfInts = (int)byteCount / sizeof(int);
     unsigned int* intBufferOut = (unsigned int*)pBufferOut;

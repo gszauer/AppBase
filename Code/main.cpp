@@ -90,9 +90,10 @@ void frame(void) {
     ImGui::Text("Drag windows over one another!");
     ImGui::SliderFloat("float", &f, 0.0f, 1.0f);
     ImGui::ColorEdit3("clear color", &pass_action.colors[0].clear_value.r);
+    if (ImGui::Button("Regen GUID")) gUUID = GenerateGuid();
+    ImGui::SameLine();
     if (ImGui::Button("Test Window")) show_test_window ^= 1;
     ImGui::SameLine();
-    if (ImGui::Button("Regen")) gUUID = GenerateGuid();
     if (ImGui::Button("Another Window")) show_another_window ^= 1;
     ImGui::Text("Random guid: %s", gUUID.c_str());
     ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
