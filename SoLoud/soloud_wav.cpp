@@ -368,17 +368,16 @@ namespace SoLoud
 		mSampleCount = aLength / aChannels;
 		mChannels = aChannels;
 		mBaseSamplerate = aSamplerate;
-		unsigned int i;
 		if (!sourceIsInterleaved) {
-			for (i = 0; i < aLength; i++) {
+			for (unsigned int i = 0; i < aLength; i++) {
 				mData[i] = (float)((signed short)aMem[i]) / (float)(int)0x8000;
 			}
 		}
 		else {
-			unsigned int hLength = aLength / 2;
-			for (i = 0; i < hLength; i++) {
-				mData[i] = (float)((signed short)aMem[i * 2 + 0]) / (float)(int)0x8000;
-				mData[i + hLength] = (float)((signed short)aMem[i * 2 + 1]) / (float)(int)0x8000;
+			for (unsigned int j = 0; j < aChannels; ++j) {
+				for (unsigned int i = 0; i < mSampleCount; i++) {
+					mData[i + (mSampleCount * j)] = (float)((signed short)aMem[i * aChannels + j]) / (float)(int)0x8000;
+				}
 			}
 		}
 		return SO_NO_ERROR;
