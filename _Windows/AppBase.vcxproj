@@ -153,6 +153,7 @@
     <ClInclude Include="..\Framework\sokol_log.h" />
     <ClInclude Include="..\Framework\sokol_shape.h" />
     <ClInclude Include="..\Framework\sokol_time.h" />
+    <ClInclude Include="..\Framework\stb_image.h" />
     <ClInclude Include="..\Framework\stb_vorbis.h" />
     <ClInclude Include="..\SoLoud\soloud.h" />
     <ClInclude Include="..\SoLoud\soloud_audiosource.h" />
@@ -204,6 +205,7 @@
     <ClCompile Include="..\Framework\qoa.cpp" />
     <ClCompile Include="..\Framework\qoi.cpp" />
     <ClCompile Include="..\Framework\sokol_impl.cpp" />
+    <ClCompile Include="..\Framework\stb_image.cpp" />
     <ClCompile Include="..\Framework\stb_vorbis.c" />
     <ClCompile Include="..\SoLoud\soloud.cpp" />
     <ClCompile Include="..\SoLoud\soloud_audiosource.cpp" />

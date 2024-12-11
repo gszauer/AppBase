@@ -213,6 +213,9 @@
     <ClInclude Include="..\Framework\minimp3.h">
       <Filter>Header Files\Framework</Filter>
     </ClInclude>
+    <ClInclude Include="..\Framework\stb_image.h">
+      <Filter>Header Files\Framework</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Framework\sokol_impl.cpp">
@@ -354,6 +357,9 @@
       <Filter>Source Files\Framework</Filter>
     </ClCompile>
     <ClCompile Include="..\Framework\minimp3.c">
+      <Filter>Source Files\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Framework\stb_image.cpp">
       <Filter>Source Files\Framework</Filter>
     </ClCompile>
   </ItemGroup>
