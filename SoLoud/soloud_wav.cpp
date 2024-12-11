@@ -358,7 +358,7 @@ namespace SoLoud
 		return SO_NO_ERROR;
 	}
 
-	result Wav::loadRawWave16(short *aMem, unsigned int aLength, float aSamplerate, unsigned int aChannels)
+	result Wav::loadRawWave16(short *aMem, unsigned int aLength, float aSamplerate, unsigned int aChannels, bool sourceIsInterleaved)
 	{
 		if (aMem == 0 || aLength == 0 || aSamplerate <= 0 || aChannels < 1)
 			return INVALID_PARAMETER;
@@ -369,8 +369,18 @@ namespace SoLoud
 		mChannels = aChannels;
 		mBaseSamplerate = aSamplerate;
 		unsigned int i;
-		for (i = 0; i < aLength; i++)
-			mData[i] = ((signed short)aMem[i]) / (float)0x8000;
+		if (!sourceIsInterleaved) {
+			for (i = 0; i < aLength; i++) {
+				mData[i] = (float)((signed short)aMem[i]) / (float)(int)0x8000;
+			}
+		}
+		else {
+			unsigned int hLength = aLength / 2;
+			for (i = 0; i < hLength; i++) {
+				mData[i] = (float)((signed short)aMem[i * 2 + 0]) / (float)(int)0x8000;
+				mData[i + hLength] = (float)((signed short)aMem[i * 2 + 1]) / (float)(int)0x8000;
+			}
+		}
 		return SO_NO_ERROR;
 	}
 

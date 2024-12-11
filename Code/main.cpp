@@ -27,9 +27,10 @@ static sg_pass_action pass_action;
 static SoLoud::Soloud* gSoloud = 0; // SoLoud aengine
 static SoLoud::Wav* gWave = 0;      // One wave file
 
-// array size is 113880
+#if 1
 #define embedded_qoa_size 113880
 extern const unsigned char embedded_qoa[];
+#endif
 
 void init(void) {
     // setup sokol-gfx, sokol-time and sokol-imgui
@@ -96,8 +97,9 @@ void frame(void) {
                 short* sample_data = qoa_decode(embedded_qoa, embedded_qoa_size, &sample_info);
                 gWave = new SoLoud::Wav();
                 gWave->loadRawWave16(sample_data, 
-                    sample_info.samples * sample_info.channels, 
-                    sample_info.samplerate, sample_info.channels);
+                    sample_info.samples * sample_info.channels,
+                    sample_info.samplerate, sample_info.channels, true);
+                float len = gWave->getLength();
                 //gWave->load("sample-3s.mp3");
                 free(sample_data);
             }
@@ -213,7 +215,7 @@ sapp_desc sokol_main(int argc, char* argv[]) {
 }
 #endif
 
-
+#if 1
 // array size is 113880
 const unsigned char embedded_qoa[] = {
   0x71, 0x6f, 0x61, 0x66, 0x00, 0x02, 0x26, 0x80, 0x02, 0x00, 0xac, 0x44, 0x14, 0x00, 0x10, 0x28,
@@ -7335,3 +7337,4 @@ const unsigned char embedded_qoa[] = {
   0x44, 0x66, 0xb6, 0x50, 0xdc, 0x7a, 0x77, 0x29, 0x46, 0x41, 0x5b, 0xb0, 0x00, 0x00, 0x00, 0x00,
   0x46, 0x41, 0x5b, 0xb0, 0x00, 0x00, 0x00, 0x00
 };
+#endif
