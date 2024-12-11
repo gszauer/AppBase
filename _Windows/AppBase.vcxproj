@@ -140,6 +140,7 @@
     <ClInclude Include="..\Framework\mackron_sha1.h" />
     <ClInclude Include="..\Framework\mackron_uuid.h" />
     <ClInclude Include="..\Framework\miniaudio.h" />
+    <ClInclude Include="..\Framework\minimp3.h" />
     <ClInclude Include="..\Framework\qoa.h" />
     <ClInclude Include="..\Framework\qoi.h" />
     <ClInclude Include="..\Framework\Roboto.h" />
@@ -199,6 +200,7 @@
     <ClCompile Include="..\Framework\imgui_widgets.cpp" />
     <ClCompile Include="..\Framework\mackron_impl.cpp" />
     <ClCompile Include="..\Framework\miniaudio.c" />
+    <ClCompile Include="..\Framework\minimp3.c" />
     <ClCompile Include="..\Framework\qoa.cpp" />
     <ClCompile Include="..\Framework\qoi.cpp" />
     <ClCompile Include="..\Framework\sokol_impl.cpp" />

@@ -112,8 +112,7 @@ void frame(void) {
                 gWave = new SoLoud::Wav();
                 gWave->loadRawWave16(sample_data, 
                     sample_info.samples * sample_info.channels,
-                    sample_info.samplerate, sample_info.channels, true);
-                float len = gWave->getLength();
+                    (float)sample_info.samplerate, sample_info.channels, true);
                 //gWave->load("sample-3s.mp3");
                 free(sample_data);
             }

@@ -12,6 +12,7 @@
 #include "../Framework/qoa.cpp"
 #include "../Framework/qoi.cpp"
 #include "../Framework/mackron_impl.cpp"
+#include "../Framework/minimp3.c"
 
 #define WITH_MINIAUDIO
 #include "../SoLoud/soloud.cpp"
