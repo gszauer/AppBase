@@ -136,6 +136,9 @@
     <ClInclude Include="..\Framework\imstb_rectpack.h" />
     <ClInclude Include="..\Framework\imstb_textedit.h" />
     <ClInclude Include="..\Framework\imstb_truetype.h" />
+    <ClInclude Include="..\Framework\mackron_md5.h" />
+    <ClInclude Include="..\Framework\mackron_sha1.h" />
+    <ClInclude Include="..\Framework\mackron_uuid.h" />
     <ClInclude Include="..\Framework\miniaudio.h" />
     <ClInclude Include="..\Framework\qoa.h" />
     <ClInclude Include="..\Framework\qoi.h" />
@@ -194,6 +197,7 @@
     <ClCompile Include="..\Framework\imgui_draw.cpp" />
     <ClCompile Include="..\Framework\imgui_tables.cpp" />
     <ClCompile Include="..\Framework\imgui_widgets.cpp" />
+    <ClCompile Include="..\Framework\mackron_impl.cpp" />
     <ClCompile Include="..\Framework\miniaudio.c" />
     <ClCompile Include="..\Framework\qoa.cpp" />
     <ClCompile Include="..\Framework\qoi.cpp" />

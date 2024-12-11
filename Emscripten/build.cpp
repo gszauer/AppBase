@@ -11,6 +11,7 @@
 #include "../Framework/stb_vorbis.c"
 #include "../Framework/qoa.cpp"
 #include "../Framework/qoi.cpp"
+#include "../Framework/mackron_impl.cpp"
 
 #define WITH_MINIAUDIO
 #include "../SoLoud/soloud.cpp"

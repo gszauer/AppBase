@@ -13,11 +13,14 @@
 #include "../Framework/sokol_imgui.h"
 #include "../Framework/Roboto.h"
 
+#include "../Framework/mackron_uuid.h"
+
 #include "../SoLoud/soloud.h"
 #include "../SoLoud/soloud_wav.h"
 #include "../Framework/qoa.h"
 
 #include <cstring>
+#include <string>
 
 static bool show_test_window = true;
 static bool show_another_window = true;
@@ -26,6 +29,10 @@ static sg_pass_action pass_action;
 
 static SoLoud::Soloud* gSoloud = 0; // SoLoud aengine
 static SoLoud::Wav* gWave = 0;      // One wave file
+
+std::string gUUID = "";
+
+
 
 #if 1
 #define embedded_qoa_size 113880
@@ -67,6 +74,9 @@ void init(void) {
     // initial clear color
     pass_action.colors[0].load_action = SG_LOADACTION_CLEAR;
     pass_action.colors[0].clear_value = { 0.3f, 0.7f, 0.5f, 1.0f };
+
+    gUUID = GenerateGuid();
+    //std::count << guidBuffer << "\n";
 }
 
 void frame(void) {
@@ -81,7 +91,10 @@ void frame(void) {
     ImGui::SliderFloat("float", &f, 0.0f, 1.0f);
     ImGui::ColorEdit3("clear color", &pass_action.colors[0].clear_value.r);
     if (ImGui::Button("Test Window")) show_test_window ^= 1;
+    ImGui::SameLine();
+    if (ImGui::Button("Regen")) gUUID = GenerateGuid();
     if (ImGui::Button("Another Window")) show_another_window ^= 1;
+    ImGui::Text("Random guid: %s", gUUID.c_str());
     ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
 
     // 2. Show another simple window, this time using an explicit Begin/End pair
