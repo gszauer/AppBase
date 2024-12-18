@@ -133,6 +133,7 @@
     <ClInclude Include="..\Framework\imconfig.h" />
     <ClInclude Include="..\Framework\imgui.h" />
     <ClInclude Include="..\Framework\imgui_internal.h" />
+    <ClInclude Include="..\Framework\imgui_stdlib.h" />
     <ClInclude Include="..\Framework\imstb_rectpack.h" />
     <ClInclude Include="..\Framework\imstb_textedit.h" />
     <ClInclude Include="..\Framework\imstb_truetype.h" />
@@ -197,6 +198,7 @@
     <ClCompile Include="..\Framework\imgui.cpp" />
     <ClCompile Include="..\Framework\imgui_demo.cpp" />
     <ClCompile Include="..\Framework\imgui_draw.cpp" />
+    <ClCompile Include="..\Framework\imgui_stdlib.cpp" />
     <ClCompile Include="..\Framework\imgui_tables.cpp" />
     <ClCompile Include="..\Framework\imgui_widgets.cpp" />
     <ClCompile Include="..\Framework\mackron_impl.cpp" />

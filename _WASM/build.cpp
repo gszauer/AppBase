@@ -6,6 +6,7 @@
 #include "../Framework/imgui_tables.cpp"
 #include "../Framework/imgui_draw.cpp"
 #include "../Framework/imgui_demo.cpp"
+#include "../Framework/imgui_stdlib.cpp"
 #include "../Framework/imgui.cpp"
 #include "../Framework/dr_impl.cpp"
 #include "../Framework/stb_vorbis.c"
