@@ -29,10 +29,10 @@ freely, subject to the following restrictions:
 #include "soloud_wav.h"
 #include "soloud_file.h"
 
-#include "../Framework/stb_vorbis.h"
-#include "../Framework/dr_mp3.h"
-#include "../Framework/dr_wav.h"
-#include "../Framework/dr_flac.h"
+#include "../stb_vorbis.h"
+#include "../dr_mp3.h"
+#include "../dr_wav.h"
+#include "../dr_flac.h"
 
 namespace SoLoud
 {

@@ -47,7 +47,7 @@ namespace SoLoud
 
 #define MA_NO_NULL
 #define MA_NO_DECODING
-#include "../Framework/miniaudio.h"
+#include "../miniaudio.h"
 #include <math.h>
 #include "soloud.h"
 

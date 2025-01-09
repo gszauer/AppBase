@@ -15,8 +15,8 @@
 
 #include "../Framework/mackron_uuid.h"
 
-#include "../SoLoud/soloud.h"
-#include "../SoLoud/soloud_wav.h"
+#include "../Framework/SoLoud/soloud.h"
+#include "../Framework/SoLoud/soloud_wav.h"
 #include "../Framework/qoa.h"
 
 #include <cstring>

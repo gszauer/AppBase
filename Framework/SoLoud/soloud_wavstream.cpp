@@ -26,12 +26,12 @@ freely, subject to the following restrictions:
 #include <stdio.h>
 #include <stdlib.h>
 #include "soloud.h"
-#include "../Framework/dr_flac.h"
-#include "../Framework/dr_mp3.h"
-#include "../Framework/dr_wav.h"
+#include "../dr_flac.h"
+#include "../dr_mp3.h"
+#include "../dr_wav.h"
 #include "soloud_wavstream.h"
 #include "soloud_file.h"
-#include "../Framework/stb_vorbis.h"
+#include "../stb_vorbis.h"
 
 namespace SoLoud
 {
