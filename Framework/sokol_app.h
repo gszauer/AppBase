@@ -98,10 +98,10 @@
     gles3/webgl2        | ---     | ---   | YES(2)| YES   | YES     |  YES
     metal               | ---     | YES   | ---   | YES   | ---     |  ---
     d3d11               | YES     | ---   | ---   | ---   | ---     |  ---
-    noapi               | YES     | TODO  | TODO  | ---   | TODO    |  ---
-    KEY_DOWN            | YES     | YES   | YES   | SOME  | TODO    |  YES
-    KEY_UP              | YES     | YES   | YES   | SOME  | TODO    |  YES
-    CHAR                | YES     | YES   | YES   | YES   | TODO    |  YES
+    noapi               | YES     | TOD0  | TOD0  | ---   | TOD0    |  ---
+    KEY_DOWN            | YES     | YES   | YES   | SOME  | TOD0    |  YES
+    KEY_UP              | YES     | YES   | YES   | SOME  | TOD0    |  YES
+    CHAR                | YES     | YES   | YES   | YES   | TOD0    |  YES
     MOUSE_DOWN          | YES     | YES   | YES   | ---   | ---     |  YES
     MOUSE_UP            | YES     | YES   | YES   | ---   | ---     |  YES
     MOUSE_SCROLL        | YES     | YES   | YES   | ---   | ---     |  YES
@@ -117,19 +117,19 @@
     RESTORED            | YES     | YES   | YES   | ---   | ---     |  ---
     FOCUSED             | YES     | YES   | YES   | ---   | ---     |  YES
     UNFOCUSED           | YES     | YES   | YES   | ---   | ---     |  YES
-    SUSPENDED           | ---     | ---   | ---   | YES   | YES     |  TODO
-    RESUMED             | ---     | ---   | ---   | YES   | YES     |  TODO
+    SUSPENDED           | ---     | ---   | ---   | YES   | YES     |  TOD0
+    RESUMED             | ---     | ---   | ---   | YES   | YES     |  TOD0
     QUIT_REQUESTED      | YES     | YES   | YES   | ---   | ---     |  YES
-    IME                 | TODO    | TODO? | TODO  | ???   | TODO    |  ???
+    IME                 | TOD0    | TOD0? | TOD0  | ???   | TOD0    |  ???
     key repeat flag     | YES     | YES   | YES   | ---   | ---     |  YES
     windowed            | YES     | YES   | YES   | ---   | ---     |  YES
     fullscreen          | YES     | YES   | YES   | YES   | YES     |  ---
     mouse hide          | YES     | YES   | YES   | ---   | ---     |  YES
     mouse lock          | YES     | YES   | YES   | ---   | ---     |  YES
     set cursor type     | YES     | YES   | YES   | ---   | ---     |  YES
-    screen keyboard     | ---     | ---   | ---   | YES   | TODO    |  YES
-    swap interval       | YES     | YES   | YES   | YES   | TODO    |  YES
-    high-dpi            | YES     | YES   | TODO  | YES   | YES     |  YES
+    screen keyboard     | ---     | ---   | ---   | YES   | TOD0    |  YES
+    swap interval       | YES     | YES   | YES   | YES   | TOD0    |  YES
+    high-dpi            | YES     | YES   | TOD0  | YES   | YES     |  YES
     clipboard           | YES     | YES   | YES   | ---   | ---     |  YES
     MSAA                | YES     | YES   | YES   | YES   | YES     |  YES
     drag'n'drop         | YES     | YES   | YES   | ---   | ---     |  YES
@@ -8274,7 +8274,7 @@ _SOKOL_PRIVATE bool _sapp_android_init_egl_surface(ANativeWindow* window) {
     SOKOL_ASSERT(_sapp.android.surface == EGL_NO_SURFACE);
     SOKOL_ASSERT(window);
 
-    /* TODO: set window flags */
+    /* TOD0: set window flags */
     /* ANativeActivity_setWindowFlags(activity, AWINDOW_FLAG_KEEP_SCREEN_ON, 0); */
 
     /* create egl surface and make it current */

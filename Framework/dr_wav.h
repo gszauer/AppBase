@@ -2969,7 +2969,7 @@ drwav_bool32 drwav_seek_to_pcm_frame(drwav* pWav, drwav_uint64 targetFrameIndex)
     to seek back to the start.
     */
     if (drwav__is_compressed_format_tag(pWav->translatedFormatTag)) {
-        /* TODO: This can be optimized. */
+        /* TOD0: This can be optimized. */
         
         /*
         If we're seeking forward it's simple - just keep reading samples until we hit the sample we're requesting. If we're seeking backwards,
@@ -3172,7 +3172,7 @@ drwav_uint64 drwav_read_pcm_frames_s16__msadpcm(drwav* pWav, drwav_uint64 frames
     DRWAV_ASSERT(framesToRead > 0);
     DRWAV_ASSERT(pBufferOut != NULL);
 
-    /* TODO: Lots of room for optimization here. */
+    /* TOD0: Lots of room for optimization here. */
 
     while (framesToRead > 0 && pWav->compressed.iCurrentPCMFrame < pWav->totalPCMFrameCount) {
         /* If there are no cached frames we need to load a new block. */
@@ -3260,7 +3260,7 @@ drwav_uint64 drwav_read_pcm_frames_s16__msadpcm(drwav* pWav, drwav_uint64 frames
                 }
                 pWav->msadpcm.bytesRemainingInBlock -= 1;
 
-                /* TODO: Optimize away these if statements. */
+                /* TOD0: Optimize away these if statements. */
                 nibble0 = ((nibbles & 0xF0) >> 4); if ((nibbles & 0x80)) { nibble0 |= 0xFFFFFFF0UL; }
                 nibble1 = ((nibbles & 0x0F) >> 0); if ((nibbles & 0x08)) { nibble1 |= 0xFFFFFFF0UL; }
 
@@ -3350,7 +3350,7 @@ drwav_uint64 drwav_read_pcm_frames_s16__ima(drwav* pWav, drwav_uint64 framesToRe
     DRWAV_ASSERT(framesToRead > 0);
     DRWAV_ASSERT(pBufferOut != NULL);
 
-    /* TODO: Lots of room for optimization here. */
+    /* TOD0: Lots of room for optimization here. */
 
     while (framesToRead > 0 && pWav->compressed.iCurrentPCMFrame < pWav->totalPCMFrameCount) {
         /* If there are no cached samples we need to load a new block. */

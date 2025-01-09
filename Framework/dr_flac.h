@@ -1321,7 +1321,7 @@ static DRFLAC_INLINE drflac_bool32 drflac__has_neon()
         #if (defined(__ARM_NEON) || defined(__aarch64__) || defined(_M_ARM64))
             return DRFLAC_TRUE;    /* If the compiler is allowed to freely generate NEON code we can assume support. */
         #else
-            /* TODO: Runtime check. */
+            /* TOD0: Runtime check. */
             return DRFLAC_FALSE;
         #endif
     #else

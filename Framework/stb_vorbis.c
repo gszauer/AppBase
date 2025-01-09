@@ -1437,7 +1437,7 @@ static int start_page_no_capturepattern(vorb *f)
    // absolute granule position
    loc0 = get32(f);
    loc1 = get32(f);
-   // @TODO: validate loc0,loc1 as valid positions?
+   // @TOD0: validate loc0,loc1 as valid positions?
    // stream serial number -- vorbis doesn't interleave, so discard
    get32(f);
    //if (f->serial != get32(f)) return error(f, VORBIS_incorrect_stream_serial_number);
@@ -4165,7 +4165,7 @@ static int start_decoder(vorb *f)
          return error(f, VORBIS_outofmem);
    }
 
-   // @TODO: stb_vorbis_seek_start expects first_audio_page_offset to point to a page
+   // @TOD0: stb_vorbis_seek_start expects first_audio_page_offset to point to a page
    // without PAGEFLAG_continued_packet, so this either points to the first page, or
    // the page after the end of the headers. It might be cleaner to point to a page
    // in the middle of the headers, when that's the page where the first audio packet
